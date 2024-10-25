@@ -1,7 +1,6 @@
 package dev.rodrigomuller.pokeapimiddleware.application.controller;
 
 import dev.rodrigomuller.pokeapimiddleware.application.dto.response.AbilitiesDTO;
-import dev.rodrigomuller.pokeapimiddleware.domain.entity.AbilityCollection;
 import dev.rodrigomuller.pokeapimiddleware.domain.service.AbilityService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
