@@ -22,10 +22,10 @@ public class PokeApiConnector {
     private static final Logger log = LoggerFactory.getLogger(PokeApiConnector.class);
     @Value("${pokeapi.url}")
     private String baseUrl;
+
     private RestClient restClient;
 
-    public PokeApiConnector(
-    ) {
+    public PokeApiConnector(RestClient restClient) {
          this.restClient = RestClient.create();
     }
 

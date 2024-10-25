@@ -4,6 +4,17 @@ public class AbilityDetailsDTO {
     private String name;
     private String url;
 
+    public AbilityDetailsDTO() {
+    }
+
+    public AbilityDetailsDTO(
+            String name,
+            String url
+    ) {
+        this.name = name;
+        this.url = url;
+    }
+
     public String getName() {
         return name;
     }

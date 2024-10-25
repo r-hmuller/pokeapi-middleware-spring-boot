@@ -8,6 +8,19 @@ public class AbilityPokeApiDTO {
     @JsonProperty("ability")
     private AbilityDetailsDTO details;
 
+    public AbilityPokeApiDTO() {
+    }
+
+    public AbilityPokeApiDTO(
+            int slot,
+            boolean is_hidden,
+            AbilityDetailsDTO details
+    ) {
+        this.slot = slot;
+        this.is_hidden = is_hidden;
+        this.details = details;
+    }
+
     public int getSlot() {
         return slot;
     }
