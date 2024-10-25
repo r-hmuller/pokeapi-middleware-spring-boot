@@ -1,8 +1,11 @@
 package dev.rodrigomuller.pokeapimiddleware.infrastructure.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class AbilityPokeApiDTO {
     private int slot;
     private boolean is_hidden;
+    @JsonProperty("ability")
     private AbilityDetailsDTO details;
 
     public int getSlot() {
@@ -27,5 +30,14 @@ public class AbilityPokeApiDTO {
 
     public void setDetails(AbilityDetailsDTO details) {
         this.details = details;
+    }
+
+    @Override
+    public String toString() {
+        return "AbilityPokeApiDTO{" +
+                "slot=" + slot +
+                ", is_hidden=" + is_hidden +
+                ", details=" + details +
+                '}';
     }
 }

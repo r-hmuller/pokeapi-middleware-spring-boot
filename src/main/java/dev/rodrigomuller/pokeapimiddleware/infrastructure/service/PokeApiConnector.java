@@ -23,7 +23,6 @@ public class PokeApiConnector {
          this.restTemplate = restTemplateBuilder.build();
     }
 
-    //TODO: Talvez mudar de string para um DTO Pokemon, já validado, que pode conter o nome
     public List<AbilityPokeApiDTO> getAbilities(String pokemon) {
         PokemonPokeApiDTO pokeApiDTO = this.getPokemonDetails(pokemon);
         return pokeApiDTO.getAbilities();
@@ -31,7 +30,6 @@ public class PokeApiConnector {
 
     private PokemonPokeApiDTO getPokemonDetails(String pokemon) {
         String pokemonUrl = baseUrl + "/pokemon/" + pokemon;
-        System.out.println(pokemonUrl);
         return this.restTemplate.getForObject(pokemonUrl, PokemonPokeApiDTO.class);
     }
 }

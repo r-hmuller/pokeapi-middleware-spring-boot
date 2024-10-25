@@ -19,7 +19,6 @@ public class AbilityService {
 
     public AbilitiesDTO getAbilitiesByPokemon(String pokemon) {
         List<AbilityPokeApiDTO> pokeApiDTO = pokeApiConnector.getAbilities(pokemon);
-
         AbilitiesDTO abilitiesDTO = new AbilitiesDTO();
 
         pokeApiDTO.forEach(ability -> abilitiesDTO.addName(ability.getDetails().getName()));

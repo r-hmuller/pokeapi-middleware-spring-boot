@@ -19,8 +19,6 @@ public class PokeApiController {
         this.abilityService = abilityService;
     }
 
-    // Aqui tenho um método GET para pegar as habilidades a partir de um pokemon
-    // TODO: Validar se pokemon existe antes de enviar pro pokeapi?
     @GetMapping("/{pokemon}")
     public AbilitiesDTO getPokemonAbilities(@PathVariable(name = "pokemon") String pokemon) {
         return abilityService.getAbilitiesByPokemon(pokemon);

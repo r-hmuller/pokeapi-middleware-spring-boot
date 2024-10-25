@@ -1,9 +1,10 @@
 package dev.rodrigomuller.pokeapimiddleware.application.dto.response;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AbilitiesDTO {
-    public List<String> names;
+    public List<String> names = new ArrayList<>();
 
     public AbilitiesDTO() {
 
